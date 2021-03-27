@@ -8,7 +8,7 @@ CREATE ROLE CEORole;
 /* Modify role access */ 
 GRANT SELECT ON dbo.Orders TO SalesRole;
 GRANT SELECT ON dbo.Employees TO HRRole;
-GRANT SELECT ON dbo Orders TO CEORole; 
+GRANT SELECT ON dbo.Orders TO CEORole; 
 GRANT SELECT ON dbo.customers TO CEORole;
 GRANT SELECT ON dbo.Employees TO CEORole;
 
