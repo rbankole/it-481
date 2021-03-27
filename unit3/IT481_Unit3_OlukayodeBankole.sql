@@ -13,9 +13,6 @@ GRANT SELECT ON dbo.customers TO CEORole;
 GRANT SELECT ON dbo.Employees TO CEORole;
 
 /* Create users */ 
-Create user User_Sales; 
-Create user User_HR; 
-Create user User_CEO; 
 CREATE LOGIN User_CEO WITH PASSWORD '123'; 
 CREATE LOGIN User_HR WITH PASSWORD '1234'; 
 CREATE LOGIN User_Sales WITH PASSWORD '12345';
