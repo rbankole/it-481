@@ -1,0 +1,15 @@
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/unit7.deps.json
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/unit7.runtimeconfig.json
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/unit7.runtimeconfig.dev.json
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/unit7.dll
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/ref/unit7.dll
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/bin/Debug/net5.0/unit7.pdb
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.csprojAssemblyReference.cache
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.AssemblyInfoInputs.cache
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.AssemblyInfo.cs
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.csproj.CoreCompileInputs.cache
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.dll
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/ref/unit7.dll
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.pdb
+/Users/olukayodebankole/cha0sm0nk3y/it-481/unit7/obj/Debug/net5.0/unit7.genruntimeconfig.cache
