@@ -4,9 +4,12 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace Assignment4B
+using System.IO;
+
+
+namespace Assignment7
 {
-    class unit4B
+    class unit7
     {
         static void Main(string[] args)
         {
@@ -23,12 +26,14 @@ namespace Assignment4B
             Console.WriteLine();
             Console.WriteLine("********** Section 1 - Bubble Sort Method **********");
             Console.WriteLine();
-            int[] studentGrades = { 65, 95, 75, 55, 560, 90, 98, 88, 97, 78 };
-            Console.Write("The unsorted list of grades is: [");
-            for (int i = 0; i <= studentGrades.GetUpperBound(0); i++)
+            string path = @"ages.txt";
+            string[] age = File.ReadAllLines(path);
+            int[] ages = age.Select(d => int.Parse(d)).ToArray();
+            Console.Write("The unsorted list of elderly ages are: [");
+            for (int i = 0; i <= ages.GetUpperBound(0); i++)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetUpperBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetUpperBound(0))
                 {
                     Console.Write(",");
                 }
@@ -38,13 +43,13 @@ namespace Assignment4B
 
             // Asc Order
             int low = 0;
-            int high = studentGrades.Length - 1;
-            sortArrayBS(studentGrades, low, high);
-            Console.Write("The grades in ascending order are: [");
-            for (int i = 0; i <= studentGrades.GetUpperBound(0); i++)
+            int high = ages.Length - 1;
+            sortArrayBS(ages, low, high);
+            Console.Write("The elderly ages in ascending order are: [");
+            for (int i = 0; i <= ages.GetUpperBound(0); i++)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetUpperBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetUpperBound(0))
                 {
                     Console.Write(",");
                     
@@ -54,12 +59,12 @@ namespace Assignment4B
             Console.ReadLine();
 
             // Desc Order;
-            sortArrayBS(studentGrades, high, low);
-            Console.Write("The grades in descending order are: [");
-            for (int i = studentGrades.Length - 1; i >= studentGrades.GetLowerBound(0); i--)
+            sortArrayBS(ages, high, low);
+            Console.Write("The elderly ages in descending order are: [");
+            for (int i = ages.Length - 1; i >= ages.GetLowerBound(0); i--)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetLowerBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetLowerBound(0))
                 {
                     Console.Write(",");                    
                 }
@@ -77,12 +82,14 @@ namespace Assignment4B
             Console.WriteLine();
             Console.WriteLine("********** Section 2 - Quick Sort Method **********");
             Console.WriteLine();
-            int[] studentGrades = { 65, 95, 75, 55, 560, 90, 98, 88, 97, 78 };
-            Console.Write("The unsorted list of grades is: [");
-            for (int i = 0; i <= studentGrades.GetUpperBound(0); i++)
+            string path = @"ages.txt";
+            string[] age = File.ReadAllLines(path);
+            int[] ages = age.Select(d => int.Parse(d)).ToArray();
+            Console.Write("The unsorted list of elderly ages are: [");
+            for (int i = 0; i <= ages.GetUpperBound(0); i++)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetUpperBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetUpperBound(0))
                 {
                     Console.Write(",");
                 }
@@ -92,13 +99,13 @@ namespace Assignment4B
 
             // Asc Order
             int low = 0;
-            int high = studentGrades.Length - 1;
-            sortArrayQS(studentGrades, low, high);
-            Console.Write("The grades in ascending order are: [");
-            for (int i = 0; i <= studentGrades.GetUpperBound(0); i++)
+            int high = ages.Length - 1;
+            sortArrayQS(ages, low, high);
+            Console.Write("The elderly ages in ascending order are: [");
+            for (int i = 0; i <= ages.GetUpperBound(0); i++)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetUpperBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetUpperBound(0))
                 {
                     Console.Write(",");
                     
@@ -108,12 +115,12 @@ namespace Assignment4B
             Console.ReadLine();
 
             // Desc Order;
-            Console.Write("The grades in descending order are: [");
-            sortArrayQS(studentGrades, high, low);
-            for (int i = studentGrades.Length - 1; i >= studentGrades.GetLowerBound(0); i--)
+            Console.Write("The elderly ages in descending order are: [");
+            sortArrayQS(ages, high, low);
+            for (int i = ages.Length - 1; i >= ages.GetLowerBound(0); i--)
             {
-                Console.Write(studentGrades[i]);
-                if (i != studentGrades.GetLowerBound(0))
+                Console.Write(ages[i]);
+                if (i != ages.GetLowerBound(0))
                 {
                     Console.Write(",");
                     
@@ -123,73 +130,73 @@ namespace Assignment4B
             Console.ReadLine();   
         }
 
-        public static void sortArrayBS(int[] grade, int low, int high) // Bubble Sort Method
+        public static void sortArrayBS(int[] ages, int low, int high) // Bubble Sort Method
                 {
-            if (grade == null || grade.Length == 0)
+            if (ages == null || ages.Length == 0)
                 return;
 
             if (low >= high)
             return;
-            int middle = low + (high - low) / 2; int cen = grade[middle];int i = low, j = high;
+            int middle = low + (high - low) / 2; int cen = ages[middle];int i = low, j = high;
             while (i <= j)
             {
-                while (grade[i] < cen)
+                while (ages[i] < cen)
                 {
                     i++;
                 }
-                while (grade[j] > cen)
+                while (ages[j] > cen)
                 {
                     j--;
                 }
                 if (i <= j)
                 {
-                    int temp = grade[i];
-                    grade[i] = grade[j];
-                    grade[j] = temp;
+                    int temp = ages[i];
+                    ages[i] = ages[j];
+                    ages[j] = temp;
                     i++;
                     j--;
                 }
             }
             if (low < j)
-                sortArrayBS(grade, low, j);
+                sortArrayBS(ages, low, j);
             if (high > i)
-                sortArrayBS(grade, i, high);
+                sortArrayBS(ages, i, high);
         }
-        public static void sortArrayQS(int[] grade, int low, int high) // Quick Sort Method
+        public static void sortArrayQS(int[] ages, int low, int high) // Quick Sort Method
         {
-            if (grade == null || grade.Length == 0)
+            if (ages == null || ages.Length == 0)
                 return;
             if (low >= high)
                 return;
             // pick the pivot 
             int middle = low + (high - low) / 2;
-            int pivot = grade[middle];
+            int pivot = ages[middle];
             // make left < pivot and right > pivot 
             int i = low, j = high;
             while (i <= j)
             {
-                while (grade[i] < pivot)
+                while (ages[i] < pivot)
                 {
                     i++;
                 }
-                while (grade[j] > pivot)
+                while (ages[j] > pivot)
                 {
                     j--;
                 }
                 if (i <= j)
                 {
-                    int temp = grade[i];
-                    grade[i] = grade[j];
-                    grade[j] = temp;
+                    int temp = ages[i];
+                    ages[i] = ages[j];
+                    ages[j] = temp;
                     i++;
                     j--;
                 }
             }
             // recursively sort two sub parts 
             if (low < j)
-                sortArrayQS(grade, low, j);
+                sortArrayQS(ages, low, j);
             if (high > i)
-                sortArrayQS(grade, i, high);
+                sortArrayQS(ages, i, high);
         }
     }
 }
