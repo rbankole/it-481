@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.Diagnostics;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
 
@@ -13,11 +15,11 @@ namespace Assignment7
     {
         static void Main(string[] args)
         {
-            bubbleSort();
-            quicksSort();
+        bubbleSort();
+        quicksSort();
         }
         //*********************************************************
-        //****Assignment 4, Part B, Section 1 - Bubble Sort
+        //**** Assignment 7 - Bubble Sort
         //*********************************************************
         static void bubbleSort()
         {
@@ -71,9 +73,21 @@ namespace Assignment7
             }
             Console.WriteLine("]");
             Console.ReadLine();
+
+        // Start timer to test how long it takes
+        var watch = new System.Diagnostics.Stopwatch();                    
+        watch.Start();        
+        // The thread's "work" consists of sleeping for 
+        // about a second. Each thread "works" a little 
+        // longer, just to make the output more orderly.
+        //
+        Thread.Sleep(1000);  
+        watch.Stop();
+        Console.WriteLine($"BubbleSort Execution Time is: {watch.ElapsedMilliseconds} ms");
         }
+
         //*********************************************************
-        //****Assignment 4, Part B, Section 2 - Quick Sort
+        //**** Assignment 7 Quick Sort
         //*********************************************************
         static void quicksSort()
         {
@@ -122,12 +136,22 @@ namespace Assignment7
                 Console.Write(ages[i]);
                 if (i != ages.GetLowerBound(0))
                 {
-                    Console.Write(",");
-                    
+                    Console.Write(",");                    
                 }
             }
             Console.WriteLine("]");
             Console.ReadLine();   
+        
+        // Start timer to test how long it takes
+        var watch = new System.Diagnostics.Stopwatch();                    
+        watch.Start();        
+        // The thread's "work" consists of sleeping for 
+        // about a second. Each thread "works" a little 
+        // longer, just to make the output more orderly.
+        //
+        Thread.Sleep(1000);  
+        watch.Stop();
+        Console.WriteLine($"QuickSort Execution Time is: {watch.ElapsedMilliseconds} ms");
         }
 
         public static void sortArrayBS(int[] ages, int low, int high) // Bubble Sort Method
