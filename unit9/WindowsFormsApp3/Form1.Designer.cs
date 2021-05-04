@@ -30,13 +30,13 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,11 +67,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Options";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(212, 153);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(167, 56);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Orders";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(63, 66);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MaxLength = 16;
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(158, 20);
             this.textBox2.TabIndex = 8;
             // 
@@ -99,6 +111,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(63, 33);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 4;
@@ -123,16 +136,6 @@
             this.button3.Text = "Employees";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(212, 153);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 56);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Orders";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 

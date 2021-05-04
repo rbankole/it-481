@@ -8,3 +8,5 @@ C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Windo
 C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
 C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.CodeAnalysisLog.xml
+C:\Users\Kapadmin\source\repos\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.lastcodeanalysissucceeded

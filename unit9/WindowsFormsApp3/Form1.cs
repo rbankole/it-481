@@ -21,13 +21,15 @@ namespace WindowsFormsApp3
         public Form1()
         {
             InitializeComponent();
-            cnn = new SqlConnection("Data Source=DESKTOP-RMMFSO1;Initial Catalog=Northwind;User Id="+ textBox1.Text+";Password="+ textBox2.Text);
+            cnn = new SqlConnection("Data Source = DESKTOP - RMMFSO1; Initial Catalog = Northwind; User Id = @textBox1; Password = @textBox2");
+            new SqlParameter("@textBox1", textBox1.Text);
+            new SqlParameter("@textBox2", textBox2.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string connetionString;
-            connetionString = @"Data Source = DESKTOP-RMMFSO1;Initial Catalog=Northwind;User Id="+ textBox1.Text+"; Password="+ textBox2.Text;
+            connetionString = @"Data Source = DESKTOP-RMMFSO1;Initial Catalog=Northwind;User Id= @textBox1; Password= @textBox2";
             cnn = new SqlConnection(connetionString);
 
             try {
@@ -37,12 +39,15 @@ namespace WindowsFormsApp3
                 }
             catch
                 {
-                MessageBox.Show("Login failed for user " + textBox1.Text);
+                MessageBox.Show("Login failed for user @textBox1");
+                new SqlParameter("@textBox1", textBox1.Text);
+
                 }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            new SqlParameter("@textBox1", textBox1.Text);
             cmd = new SqlCommand();
             cnn.Open();
             cmd.Connection = cnn;
@@ -59,7 +64,8 @@ namespace WindowsFormsApp3
             }
             catch
             {
-                MessageBox.Show("Access to Customers table denied to user " + textBox1.Text);
+                MessageBox.Show("Access to Customers table denied to user @textBox1");                
+
             }
             
         }
